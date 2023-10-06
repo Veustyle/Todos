@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" type="module"></script>
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+
+   <div class="background"></div>
+   
+   <div class="container-todo">
+
+      <div class="header">
+         <p>T O D O</p>
+         <img class="moon" src="images/icon-moon.svg" alt="moon" width="20" height="20">
+         <img style="display: none;" class="sun" src="images/icon-sun.svg" alt="moon" width="20" height="20">
+      </div>
+
+
+      <form class="add-todo">
+         <div class="my-add-checkbox"><img src="images/icon-check.svg" alt="check" width="8" height="8"></div>
+         <input type="text" class="add-input" name="add-input" placeholder="Create a new todo">
+      </form>
+
+
+
+      <div class="todo-item">
+         <div class="my-checkbox"><img src="images/icon-check.svg" alt="check" width="8" height="8"></div>
+         <p>todo1</p>
+         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+      </div>
+            
+
+
+      <div class="footer">
+         <div class="items-left"><span class="nb-items"></span> Items left</div>
+         <div class="boutons">
+            <a class="all active-link">All</a>
+            <a class="todo">Active</a>
+            <a class="completed">Completed</a>
+         </div>
+         <div class="clear-completed">
+            <a class="clear-completed">Clear Completed</a>
+         </div>
+      </div>
+
+
+   </div>
+</body>
+</html>
