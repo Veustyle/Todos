@@ -4,7 +4,7 @@ const checkbox = document.querySelectorAll('.my-checkbox');
 const addCheckbox = document.querySelector('.my-add-checkbox');
 const crosses = document.querySelectorAll('.todo-item svg');
 const addTodo = document.querySelector('form');
-const container = document.querySelector('.container-todo');
+const container = document.querySelector('.container-item');
 const allFilter = document.querySelector('.all');
 const todoFilter = document.querySelector('.todo');
 const completedFilter = document.querySelector('.completed');
@@ -12,7 +12,7 @@ const itemsLeft = document.querySelector('.nb-items');
 const clearCompleted = document.querySelector('.clear-completed');
 const addInput = document.querySelector('.add-input');
 
-itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length;
+itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length.toString();
 
 checkbox.forEach(check => {
    check.addEventListener('click', () => {
@@ -26,7 +26,7 @@ addCheckbox.addEventListener('click', () => {
 crosses.forEach(cross => {
    cross.addEventListener('click', event => {
       event.target.parentElement.remove();
-      itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length;
+      itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length.toString();
    })
 })
 
@@ -42,7 +42,7 @@ addTodo.addEventListener('submit', event => {
    const item = new TodoItem(content, classCheck);
    container.append(item);
    addInput.value = '';
-   itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length;
+   itemsLeft.innerHTML = document.querySelectorAll('.todo-item').length.toString();
 })
 
 allFilter.addEventListener('click', () => {
@@ -97,3 +97,8 @@ sun.addEventListener('click', () => {
    sun.style.display = 'none';
    document.body.classList.remove('dark-mode');
 })
+
+const init = () => {
+   dragula([document.querySelector('#dragparent')])
+}
+init()
